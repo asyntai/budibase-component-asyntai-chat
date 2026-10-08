@@ -1,0 +1,50 @@
+{
+  "type": "component",
+  "metadata": {
+    "svelteMajor": 5
+  },
+  "schema": {
+    "name": "budibase-component-asyntai-chat",
+    "friendlyName": "Asyntai AI Chat",
+    "description": "An AI agent that answers questions from your own knowledge, as a chat panel on the screen or a chat button in the corner.",
+    "icon": "chat-circle",
+    "settings": [
+      {
+        "type": "text",
+        "key": "widgetId",
+        "label": "Widget ID",
+        "required": true
+      },
+      {
+        "type": "select",
+        "key": "mode",
+        "label": "Display",
+        "defaultValue": "panel",
+        "options": [
+          { "label": "Chat panel on the screen", "value": "panel" },
+          { "label": "Chat button in the corner", "value": "bubble" }
+        ]
+      },
+      {
+        "type": "number",
+        "key": "height",
+        "label": "Panel height (px)",
+        "defaultValue": 650,
+        "dependsOn": { "setting": "mode", "value": "panel" }
+      },
+      {
+        "type": "boolean",
+        "key": "shareUser",
+        "label": "Tell the agent who is signed in",
+        "defaultValue": true,
+        "dependsOn": { "setting": "mode", "value": "bubble" }
+      },
+      {
+        "type": "text",
+        "key": "context",
+        "label": "Extra context for the agent",
+        "dependsOn": { "setting": "mode", "value": "bubble" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "budibase-component-asyntai-chat",
+  "version": "1.0.0",
+  "description": "Asyntai AI chat for Budibase apps: an AI agent that answers your team from your own knowledge, inside every screen you add it to.",
+  "license": "MIT",
+  "author": "Asyntai <hello@asyntai.com>",
+  "homepage": "https://asyntai.com/documentation/integrations/budibase/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asyntai/budibase-component-asyntai-chat.git"
+  },
+  "keywords": [
+    "budibase",
+    "budibase-plugin",
+    "component",
+    "asyntai",
+    "ai-chatbot",
+    "ai-agent",
+    "chat"
+  ],
+  "svelte": "index.js",
+  "module": "dist/plugin.min.js",
+  "schema.metadata.svelteMajor": 5,
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "test": "node --test test/loader.test.mjs"
+  },
+  "dependencies": {
+    "svelte": "5.40.2"
+  },
+  "devDependencies": {
+    "@budibase/backend-core": "3.48.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "jsdom": "^24.0.0",
+    "postcss": "^8.2.10",
+    "rollup": "^4.21.0",
+    "rollup-plugin-copy2": "^0.3.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-polyfill-node": "^0.8.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-svelte": "^7.2.3",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tar": "^6.1.11"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  }
+}
